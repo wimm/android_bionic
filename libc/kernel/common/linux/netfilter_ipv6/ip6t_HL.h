@@ -13,14 +13,13 @@
 #define _IP6T_HL_H
 
 enum {
- IP6T_HL_SET = 0,
- IP6T_HL_INC,
- IP6T_HL_DEC
+ IP6T_HL_EQ = 0,
+ IP6T_HL_NE,
+ IP6T_HL_LT,
+ IP6T_HL_GT,
 };
 
-#define IP6T_HL_MAXMODE IP6T_HL_DEC
-
-struct ip6t_HL_info {
+struct ip6t_hl_info {
  u_int8_t mode;
  u_int8_t hop_limit;
 };
